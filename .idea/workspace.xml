@@ -2,55 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5da0ce82-bf5d-4580-801e-4f3808697ae5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/BlockMoveException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Color.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/blue.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/blue.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/brown.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/brown.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cyan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cyan.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/dark_grey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/dark_grey.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/green.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/green.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/light_grey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/light_grey.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/magenta.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/magenta.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/yellow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/yellow.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Block$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/BlockMoveException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Color.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/blue.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/blue.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/brown.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/brown.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cyan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cyan.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dark_grey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dark_grey.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/green.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/green.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/light_grey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/light_grey.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/magenta.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/magenta.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/yellow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/yellow.psd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/brand.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/brand.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_nifty_gui_nifty_1_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_nifty_gui_nifty_default_controls_1_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_nifty_gui_nifty_style_black_1_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_2_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jmonkeyengine_jme3_niftygui_3_2_1_stable.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xpp3_xpp3_1_1_4c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/3dTetris.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/3dTetris.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Block.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TetrisGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TetrisGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Tetromino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tetromino.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Tetrominoes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tetrominoes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Block.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Block.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TetrisGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TetrisGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Tetromino.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Tetromino.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Tetrominoes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Tetrominoes.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,8 +27,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+            <state relative-caret-position="251">
+              <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -74,16 +36,12 @@
       <file leaf-file-name="TetrisGame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/TetrisGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="57" column="92" selection-start-line="57" selection-start-column="92" selection-end-line="57" selection-end-column="92" />
+            <state relative-caret-position="255">
+              <caret line="148" column="38" lean-forward="true" selection-start-line="148" selection-start-column="38" selection-end-line="148" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1793#1794#0" expanded="true" />
-                <element signature="e#1832#1833#0" expanded="true" />
-                <element signature="e#3140#3141#0" expanded="true" />
-                <element signature="e#3183#3184#0" expanded="true" />
-                <element signature="e#6730#6731#0" expanded="true" />
-                <element signature="e#6770#6771#0" expanded="true" />
+                <element signature="e#8217#8218#0" expanded="true" />
+                <element signature="e#8257#8258#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -92,13 +50,10 @@
       <file leaf-file-name="BlockMoveException.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/BlockMoveException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+            <state relative-caret-position="221">
+              <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
               <folding>
-                <element signature="e#249#250#0" expanded="true" />
-                <element signature="e#281#282#0" expanded="true" />
-                <element signature="e#407#408#0" expanded="true" />
-                <element signature="e#441#442#0" expanded="true" />
+                <element signature="e#442#443#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -107,12 +62,10 @@
       <file leaf-file-name="Tetromino.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Tetromino.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
+            <state relative-caret-position="17">
               <caret line="23" column="86" selection-start-line="23" selection-start-column="86" selection-end-line="23" selection-end-column="86" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3168#3169#0" expanded="true" />
-                <element signature="e#3199#3200#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -121,7 +74,7 @@
       <file leaf-file-name="GameLogic.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/GameLogic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
+            <state relative-caret-position="204">
               <caret line="12" column="86" selection-start-line="12" selection-start-column="86" selection-end-line="12" selection-end-column="86" />
               <folding>
                 <element signature="e#239#240#0" expanded="true" />
@@ -134,7 +87,7 @@
       <file leaf-file-name="Block.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Block.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
+            <state relative-caret-position="748">
               <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -146,16 +99,10 @@
       <file leaf-file-name="Tetrominoes.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Tetrominoes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
+            <state relative-caret-position="833">
               <caret line="52" column="15" selection-start-line="52" selection-start-column="15" selection-end-line="52" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#942#943#0" expanded="true" />
-                <element signature="e#997#998#0" expanded="true" />
-                <element signature="e#1233#1234#0" expanded="true" />
-                <element signature="e#1262#1263#0" expanded="true" />
-                <element signature="e#1297#1298#0" expanded="true" />
-                <element signature="e#1325#1326#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -164,7 +111,7 @@
       <file leaf-file-name="Color.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Color.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
+            <state relative-caret-position="153">
               <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
             </state>
           </provider>
@@ -181,12 +128,12 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/Game.java" />
         <option value="$PROJECT_DIR$/src/main/java/Tet_O.java" />
         <option value="$PROJECT_DIR$/src/main/java/Tetronimo.java" />
@@ -201,6 +148,7 @@
         <option value="$PROJECT_DIR$/src/main/java/Color.java" />
         <option value="$PROJECT_DIR$/src/main/java/Block.java" />
         <option value="$PROJECT_DIR$/src/main/java/Tetrominoes.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/TetrisGame.java" />
       </list>
     </option>
@@ -212,10 +160,11 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="936" />
-    <option name="width" value="1630" />
-    <option name="height" value="1048" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="86" />
+    <option name="y" value="246" />
+    <option name="width" value="1300" />
+    <option name="height" value="1044" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -225,6 +174,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -250,18 +200,27 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="3dTetris" type="b2602c69:ProjectViewProjectNode" />
+              <item name="3dTetris" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TetrisGUI" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -277,6 +236,8 @@
   </component>
   <component name="RunManager">
     <configuration name="Unnamed" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Java/jdk1.8.0_144" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="TetrisGame" />
       <module name="3dTetris" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -337,9 +298,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1933" height="1053" extended-state="6" />
-    <editor active="true" />
+    <frame x="86" y="246" width="1300" height="1044" extended-state="0" />
     <layout>
+      <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32852387" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
@@ -347,26 +308,25 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32852387" />
       <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31216362" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.117866665" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11682243" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39955604" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39955604" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Floobits" order="7" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -419,6 +379,83 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BlockMoveException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <folding>
+            <element signature="e#442#443#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Tetromino.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="86" selection-start-line="23" selection-start-column="86" selection-end-line="23" selection-end-column="86" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GameLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="86" selection-start-line="12" selection-start-column="86" selection-end-line="12" selection-end-column="86" />
+          <folding>
+            <element signature="e#239#240#0" expanded="true" />
+            <element signature="e#334#335#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Block.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Tetrominoes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="52" column="15" selection-start-line="52" selection-start-column="15" selection-end-line="52" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Color.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TetrisGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="57" column="92" selection-start-line="57" selection-start-column="92" selection-end-line="57" selection-end-column="92" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#8217#8218#0" expanded="true" />
+            <element signature="e#8257#8258#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="667">
           <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
         </state>
@@ -430,19 +467,13 @@
           <caret line="54" selection-start-line="54" selection-end-line="54" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1793#1794#0" expanded="true" />
-            <element signature="e#1832#1833#0" expanded="true" />
-            <element signature="e#3140#3141#0" expanded="true" />
-            <element signature="e#3183#3184#0" expanded="true" />
-            <element signature="e#6730#6731#0" expanded="true" />
-            <element signature="e#6770#6771#0" expanded="true" />
+            <element signature="e#8217#8218#0" expanded="true" />
+            <element signature="e#8257#8258#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/jmonkeyengine/jme3-core/3.2.1-stable/jme3-core-3.2.1-stable-sources.jar!/com/jme3/app/SimpleApplication.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/jmonkeyengine/jme3-core/3.2.1-stable/jme3-core-3.2.1-stable-sources.jar!/com/jme3/app/SimpleApplication.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/GameLogic.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -470,12 +501,6 @@
           <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#942#943#0" expanded="true" />
-            <element signature="e#997#998#0" expanded="true" />
-            <element signature="e#1233#1234#0" expanded="true" />
-            <element signature="e#1262#1263#0" expanded="true" />
-            <element signature="e#1297#1298#0" expanded="true" />
-            <element signature="e#1325#1326#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -486,8 +511,6 @@
           <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3168#3169#0" expanded="true" />
-            <element signature="e#3199#3200#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -505,12 +528,8 @@
           <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1793#1794#0" expanded="true" />
-            <element signature="e#1832#1833#0" expanded="true" />
-            <element signature="e#3140#3141#0" expanded="true" />
-            <element signature="e#3183#3184#0" expanded="true" />
-            <element signature="e#6730#6731#0" expanded="true" />
-            <element signature="e#6770#6771#0" expanded="true" />
+            <element signature="e#8217#8218#0" expanded="true" />
+            <element signature="e#8257#8258#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -528,20 +547,9 @@
           <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1793#1794#0" expanded="true" />
-            <element signature="e#1832#1833#0" expanded="true" />
-            <element signature="e#3140#3141#0" expanded="true" />
-            <element signature="e#3183#3184#0" expanded="true" />
-            <element signature="e#6730#6731#0" expanded="true" />
-            <element signature="e#6770#6771#0" expanded="true" />
+            <element signature="e#8217#8218#0" expanded="true" />
+            <element signature="e#8257#8258#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -551,13 +559,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Tet_O.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Util.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/jmonkeyengine/jme3-core/3.2.1-stable/jme3-core-3.2.1-stable.jar!/com/jme3/app/SimpleApplication.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/jmonkeyengine/jme3-core/3.2.1-stable/jme3-core-3.2.1-stable.jar!/com/jme3/app/SimpleApplication.class" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -565,32 +567,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/jmonkeyengine/jme3-core/3.2.1-stable/jme3-core-3.2.1-stable-sources.jar!/com/jme3/app/SimpleApplication.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BlockMoveException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-          <folding>
-            <element signature="e#249#250#0" expanded="true" />
-            <element signature="e#281#282#0" expanded="true" />
-            <element signature="e#407#408#0" expanded="true" />
-            <element signature="e#441#442#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/jmonkeyengine/jme3-core/3.2.1-stable/jme3-core-3.2.1-stable-sources.jar!/com/jme3/app/SimpleApplication.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Color.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
+        <state relative-caret-position="153">
           <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Block.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
+        <state relative-caret-position="748">
           <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -600,35 +587,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Tetrominoes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
+        <state relative-caret-position="833">
           <caret line="52" column="15" selection-start-line="52" selection-start-column="15" selection-end-line="52" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#942#943#0" expanded="true" />
-            <element signature="e#997#998#0" expanded="true" />
-            <element signature="e#1233#1234#0" expanded="true" />
-            <element signature="e#1262#1263#0" expanded="true" />
-            <element signature="e#1297#1298#0" expanded="true" />
-            <element signature="e#1325#1326#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Tetromino.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
+        <state relative-caret-position="17">
           <caret line="23" column="86" selection-start-line="23" selection-start-column="86" selection-end-line="23" selection-end-column="86" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3168#3169#0" expanded="true" />
-            <element signature="e#3199#3200#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/GameLogic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
+        <state relative-caret-position="204">
           <caret line="12" column="86" selection-start-line="12" selection-start-column="86" selection-end-line="12" selection-end-column="86" />
           <folding>
             <element signature="e#239#240#0" expanded="true" />
@@ -637,18 +616,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BlockMoveException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding>
+            <element signature="e#442#443#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/TetrisGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="57" column="92" selection-start-line="57" selection-start-column="92" selection-end-line="57" selection-end-column="92" />
+        <state relative-caret-position="255">
+          <caret line="148" column="38" lean-forward="true" selection-start-line="148" selection-start-column="38" selection-end-line="148" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1793#1794#0" expanded="true" />
-            <element signature="e#1832#1833#0" expanded="true" />
-            <element signature="e#3140#3141#0" expanded="true" />
-            <element signature="e#3183#3184#0" expanded="true" />
-            <element signature="e#6730#6731#0" expanded="true" />
-            <element signature="e#6770#6771#0" expanded="true" />
+            <element signature="e#8217#8218#0" expanded="true" />
+            <element signature="e#8257#8258#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -656,9 +648,80 @@
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>3dTetris</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: org.jmonkeyengine:jme3-core:3.2.1-stable</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

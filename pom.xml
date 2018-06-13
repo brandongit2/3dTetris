@@ -51,6 +51,11 @@
             <artifactId>jme3-lwjgl3</artifactId>
             <version>3.2.1-stable</version>
         </dependency>
+        <dependency>
+            <groupId>org.jmonkeyengine</groupId>
+            <artifactId>jme3-niftygui</artifactId>
+            <version>3.2.1-stable</version>
+        </dependency>
     </dependencies>
 
 </project>

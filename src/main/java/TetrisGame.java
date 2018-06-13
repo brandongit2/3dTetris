@@ -8,6 +8,14 @@ import com.sun.istack.internal.Nullable;
 
 import java.util.ArrayList;
 
+import de.lessvoid.nifty.Nifty;
+import de.lessvoid.nifty.builder.ScreenBuilder;
+import de.lessvoid.nifty.builder.LayerBuilder;
+import de.lessvoid.nifty.builder.PanelBuilder;
+import de.lessvoid.nifty.controls.button.builder.ButtonBuilder;
+import de.lessvoid.nifty.screen.DefaultScreenController;
+import com.jme3.niftygui.NiftyJmeDisplay;
+
 public class TetrisGame extends SimpleApplication {
     private static final int GAME_WIDTH  = 8;
     private static final int GAME_LENGTH = 8;
@@ -123,6 +131,36 @@ public class TetrisGame extends SimpleApplication {
     
     @Override
     public void simpleInitApp() {
+        //initialize
+        NiftyJmeDisplay niftyDisplay = new NiftyJmeDisplay(assetManager, inputManager, audioRenderer, guiViewPort);
+        Nifty nifty = niftyDisplay.getNifty();
+        nifty.addScreen("start", new ScreenBuilder("start"){{
+            controller(new DefaultScreenController());
+        }}.build(nifty));
+        guiViewPort.addProcessor(niftyDisplay);
+        nifty.loadStyleFile("nifty-default-styles.xml");
+        nifty.loadControlFile("nifty-default-controls.xml");
+        //screen
+        nifty.addScreen("Screen_ID", new ScreenBuilder("Title Screen"){{
+            controller(new DefaultScreenController());
+            //layer
+            layer(new LayerBuilder("Layer_ID"){{
+                //layer properties...
+                childLayoutVertical();
+                //panel
+                panel(new PanelBuilder("Panel_ID"){{
+                    //panel properties...
+                    childLayoutCenter();
+                    //GUI
+                    control(new ButtonBuilder("Button_ID", "Button"){{
+                        alignCenter();
+                        valignCenter();
+                        height("5%");
+                        width("15%");
+                    }}); //control
+                }}); //panel
+            }}); //layer
+        }}.build(nifty));
         drawGrid(0, 0, 0, new Vector3f(1, 0, 0), new Vector3f(0, 0, 1), GAME_WIDTH, GAME_LENGTH, GAME_WIDTH, GAME_LENGTH); // Base
         drawGrid(GAME_WIDTH, 0, 0, new Vector3f(0, 0, 1), new Vector3f(0, 1, 0), GAME_LENGTH, GAME_HEIGHT, GAME_LENGTH,
                  GAME_HEIGHT); // Positive X side
