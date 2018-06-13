@@ -9,11 +9,44 @@ public class Block {
     private Geometry geometry;
     private int blockCount = 0;
     
-    public Block(int x, int y, int z, TetrisGame instance) {
+    public Block(int x, int y, int z, Color color, TetrisGame instance) {
         Box box = new Box(0.5f, 0.5f, 0.5f);
         geometry = new Geometry("block" + blockCount, box);
         Material mat = new Material(instance.getAssetManager(), "Common/MatDefs/Misc/Unshaded.j3md");
-        mat.setTexture("ColorMap", instance.getAssetManager().loadTexture("red.png"));
+        String texture = "red.png";
+        switch (color) {
+            case RED:
+                texture = "red.png";
+                break;
+            case ORANGE:
+                texture = "orange.png";
+                break;
+            case YELLOW:
+                texture = "yellow.png";
+                break;
+            case GREEN:
+                texture = "green.png";
+                break;
+            case CYAN:
+                texture = "cyan.png";
+                break;
+            case BLUE:
+                texture = "blue.png";
+                break;
+            case MAGENTA:
+                texture = "magenta.png";
+                break;
+            case LIGHT_GREY:
+                texture = "light_grey.png";
+                break;
+            case DARK_GREY:
+                texture = "dark_grey.png";
+                break;
+            case BROWN:
+                texture = "brown.png";
+                break;
+        }
+        mat.setTexture("ColorMap", instance.getAssetManager().loadTexture(texture));
         geometry.setMaterial(mat);
         geometry.setLocalTranslation(x, y, z);
         

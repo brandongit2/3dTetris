@@ -7,35 +7,21 @@ public class Tetromino {
     private        Integer[][]      tetromino;
     private        Node             node;
     private static int              tetrominoCount = 0;
-    private        ArrayList<Block> blocks         = new ArrayList<>();
-    private        ArrayList<Block> prevBlocks     = new ArrayList<>();
     private        TetrisGame       instance;
     private        int              x;
     private        int              y;
     private        int              z;
-    private boolean finished = false;
-    
-    private static EnumMap<Tetrominoes, Integer[][]> tetrominoes = new EnumMap<>(Tetrominoes.class);
-    
-    static {
-        tetrominoes.put(Tetrominoes.O, new Integer[][] {
-          {0, 0, 0},
-          {0, 0, 1},
-          {1, 0, 0},
-          {1, 0, 1}
-        });
-    }
+    private        boolean          finished       = false;
     
     Tetromino(int x, int y, int z, Tetrominoes type, TetrisGame instance) {
         this.instance = instance;
         
-        tetromino = tetrominoes.get(type);
+        tetromino = type.getCoords();
         tetrominoCount++;
         
         node = new Node("tetromino" + tetrominoCount);
         for (Integer[] block : tetromino) {
-            Block newBlock = new Block(block[0], block[1], block[2], instance);
-            blocks.add(newBlock);
+            Block newBlock = new Block(block[0], block[1], block[2], type.getColor(), instance);
             node.attachChild(newBlock.getGeometry());
             
             instance.addBlock(x + block[0], y + block[1], z + block[2], newBlock);
@@ -55,25 +41,26 @@ public class Tetromino {
             try {
                 instance.moveBlock(x + block[0], y + block[1], z + block[2], dx, dy, dz);
                 blocksMoved.add(new int[] {x + dx, y + dy, z + dz});
-                System.out.println("up top " + blocksMoved.size());
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-                System.out.println("down low " + blocksMoved.size());
-                for (int[] movedBlock : blocksMoved) {
-                    try {
-                        instance.moveBlock(movedBlock[0], movedBlock[1], movedBlock[2], -dx, -dy, -dz);
-                    } catch (Exception ignored) {
+            } catch (BlockMoveException e) {
+                if (!e.shouldIgnore()) {
+                    if (e.isVertical()) {
+                        finished = true;
                     }
-                }
-                
-                node.move(-dx, -dy, -dz);
     
-                x -= dx;
-                y -= dy;
-                z -= dz;
-                
-                finished = true;
-                break;
+                    for (int[] movedBlock : blocksMoved) {
+                        try {
+                            instance.moveBlock(movedBlock[0], movedBlock[1], movedBlock[2], -dx, -dy, -dz);
+                        } catch (Exception ignored) {}
+                    }
+    
+                    node.move(-dx, -dy, -dz);
+    
+                    x -= dx;
+                    y -= dy;
+                    z -= dz;
+    
+                    break;
+                }
             }
         }
         

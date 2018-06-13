@@ -53,18 +53,20 @@ public class TetrisGame extends SimpleApplication {
         blocks[x][y][z] = block;
     }
     
-    void moveBlock(int x, int y, int z, int dx, int dy, int dz) throws Exception {
+    void moveBlock(int x, int y, int z, int dx, int dy, int dz) throws BlockMoveException {
+        try {
+            System.out.println(blocks[x + dx][y + dy][z + dz].getGeometry().getParent() + " " + blocks[x][y][z].getGeometry().getParent());
+        } catch (Exception ignored) {}
         try {
             if (blocks[x + dx][y + dy][z + dz] == null || blocks[x + dx][y + dy][z + dz].getGeometry().getParent() == blocks[x][y][z].getGeometry().getParent()) {
                 blocks[x + dx][y + dy][z + dz] = blocks[x][y][z];
                 blocks[x][y][z] = null;
             } else {
-                throw new Exception("Attempted to move a block to an occupied spot.");
+                throw new BlockMoveException("Attempted to move a block to an occupied spot.", dy != 0, x < 0 || x > GAME_WIDTH || y < 0 || y > GAME_HEIGHT || z < 0 || z > GAME_LENGTH);
             }
         } catch (ArrayIndexOutOfBoundsException e) {
-            throw new Exception("Attempted to move a block out of the game area." + (x + dx) + " " + (y + dy) + " " + (z + dz));
-        } catch (NullPointerException e) {
-        
+            throw new BlockMoveException("Attempted to move a block out of the game area: " + (x + dx) + " " + (y + dy) + " " + (z + dz), dy != 0, x < 0 || x > GAME_WIDTH || y < 0 || y > GAME_HEIGHT || z < 0 || z > GAME_LENGTH);
+        } catch (NullPointerException ignored) {
         }
     }
     
