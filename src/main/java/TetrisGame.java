@@ -6,18 +6,22 @@ import com.jme3.scene.Geometry;
 import com.jme3.scene.shape.Line;
 import com.sun.istack.internal.Nullable;
 
-public class RacingGame extends SimpleApplication {
+import java.util.ArrayList;
+
+public class TetrisGame extends SimpleApplication {
     private static final int GAME_WIDTH  = 8;
     private static final int GAME_LENGTH = 8;
     private static final int GAME_HEIGHT = 16;
     
     @Nullable
-    Geometry[][][] blocks = new Geometry[GAME_WIDTH][GAME_LENGTH][GAME_HEIGHT];
+    Block[][][] blocks = new Block[GAME_WIDTH][GAME_HEIGHT][GAME_LENGTH];
     @Nullable
-    private Geometry[][][] prevBlocks = new Geometry[GAME_WIDTH][GAME_LENGTH][GAME_HEIGHT];
+    private Block[][][] prevBlocks = new Block[GAME_WIDTH][GAME_HEIGHT][GAME_LENGTH];
+    private ArrayList<Tetromino> tetrominoes = new ArrayList<>();
     
     private long startTime   = System.currentTimeMillis();
     private long timeElapsed = startTime;
+    private long prevTime    = System.currentTimeMillis();
     
     @Nullable
     private Tetromino active = null;
@@ -27,9 +31,9 @@ public class RacingGame extends SimpleApplication {
             for (int j = 0; j < GAME_LENGTH; j++) {
                 for (int k = 0; k < GAME_HEIGHT; k++) {
                     if (prevBlocks[i][j][k] == null && blocks[i][j][k] != null) {
-                        rootNode.attachChild(blocks[i][j][k]);
+                        rootNode.attachChild(blocks[i][j][k].getGeometry());
                     } else if (prevBlocks[i][j][k] != null) {
-                        rootNode.detachChild(prevBlocks[i][j][k]);
+                        rootNode.detachChild(prevBlocks[i][j][k].getGeometry());
                     }
                 }
             }
@@ -45,20 +49,22 @@ public class RacingGame extends SimpleApplication {
         }
     }
     
-    public void addBlock(int x, int y, int z, Geometry block) {
+    void addBlock(int x, int y, int z, Block block) {
         blocks[x][y][z] = block;
     }
     
-    public void moveBlock(int x, int y, int z, int dx, int dy, int dz) throws Exception {
+    void moveBlock(int x, int y, int z, int dx, int dy, int dz) throws Exception {
         try {
-            if (blocks[x + dx][y + dy][z + dz] == null) {
+            if (blocks[x + dx][y + dy][z + dz] == null || blocks[x + dx][y + dy][z + dz].getGeometry().getParent() == blocks[x][y][z].getGeometry().getParent()) {
                 blocks[x + dx][y + dy][z + dz] = blocks[x][y][z];
                 blocks[x][y][z] = null;
             } else {
                 throw new Exception("Attempted to move a block to an occupied spot.");
             }
         } catch (ArrayIndexOutOfBoundsException e) {
-            throw new Exception("Attempted to move a block out of the game area.");
+            throw new Exception("Attempted to move a block out of the game area." + (x + dx) + " " + (y + dy) + " " + (z + dz));
+        } catch (NullPointerException e) {
+        
         }
     }
     
@@ -108,6 +114,11 @@ public class RacingGame extends SimpleApplication {
         rootNode.attachChild(geom);
     }
     
+    private void newTetromino() {
+        Tetromino tet = new Tetromino(3, 15, 3, Tetrominoes.randomTetromino(), this);
+        active = tet;
+    }
+    
     @Override
     public void simpleInitApp() {
         drawGrid(0, 0, 0, new Vector3f(1, 0, 0), new Vector3f(0, 0, 1), GAME_WIDTH, GAME_LENGTH, GAME_WIDTH, GAME_LENGTH); // Base
@@ -117,18 +128,20 @@ public class RacingGame extends SimpleApplication {
                  GAME_HEIGHT); // Positive Z side
         drawGrid(0, 0, 0, new Vector3f(0, 0, 1), new Vector3f(0, 1, 0), GAME_LENGTH, GAME_HEIGHT, GAME_LENGTH, GAME_HEIGHT); // Negative X side
         drawGrid(0, 0, 0, new Vector3f(1, 0, 0), new Vector3f(0, 1, 0), GAME_WIDTH, GAME_HEIGHT, GAME_WIDTH, GAME_HEIGHT); // Negative Z side
-        Tetromino o = new Tetromino(3, 15, 3, Tetrominoes.O, this);
-        active = o;
-        
-        new GameLogic(this);
+        newTetromino();
     }
     
     @Override
     public void simpleUpdate(float tpf) {
-        timeElapsed = (System.currentTimeMillis() - startTime) % 2000;
-        if (timeElapsed > 2000) {
+        timeElapsed = System.currentTimeMillis() - prevTime;
+        if (timeElapsed > 1000) {
             active.translate(0, -1, 0);
+            if (active.isFinished()) {
+                newTetromino();
+            }
+            
             timeElapsed = 0;
+            prevTime = System.currentTimeMillis();
         }
     }
     
@@ -138,6 +151,6 @@ public class RacingGame extends SimpleApplication {
      * @param args Arguments.
      */
     public static void main(String[] args) {
-        new RacingGame().start();
+        new TetrisGame().start();
     }
 }

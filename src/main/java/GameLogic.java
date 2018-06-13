@@ -1,9 +1,9 @@
 import com.jme3.app.state.RootNodeAppState;
 
 public class GameLogic {
-    RacingGame instance;
+    TetrisGame instance;
     
-    GameLogic(RacingGame instance) {
+    GameLogic(TetrisGame instance) {
         this.instance = instance;
         
         gameLoop();
