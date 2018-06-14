@@ -168,22 +168,18 @@ public class TetrisGame extends SimpleApplication{
             layer(new LayerBuilder("Layer_ID"){{
                 //layer properties...
                 childLayoutHorizontal();
-                //panel
                 layer(new LayerBuilder("MasterLayer"){{
-                    
                     childLayoutHorizontal();
-                    
-                    panel(new PanelBuilder("Grid") {{
+                    //panel
+                    panel(new PanelBuilder("Grid") {{ //for grid and tetris logo
                         childLayoutCenter();
                         alignLeft();
                         width("50%");
                         height("100%");
                         backgroundColor("#000000");
                     }});
-    
-    
-                    panel(new PanelBuilder("Start_Menu") {{
-                        
+                    
+                    panel(new PanelBuilder("Start_Menu") {{ //welcome, play, highscore
                         childLayoutVertical();
                         alignRight();
                         width("50%");
@@ -265,15 +261,15 @@ public class TetrisGame extends SimpleApplication{
     public void start() {
         Scanner in = null;
         try {
-            in = new Scanner(new File(this.getClass().getClassLoader().getResource("high scores.txt").toURI()));
+            in = new Scanner(new File(this.getClass().getClassLoader().getResource("high scores.txt").toURI())); //classloader creates URI of file
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
         StringBuilder stringBuilder = new StringBuilder();
-        while (in.hasNext()) {
-            stringBuilder.append(in.nextLine() + "\n");
+        for (int i = 0; i<5; i++){
+            stringBuilder.append(in.nextLine() + "\n"); //appends top 5 scores into highscoresText
         }
         highscoresText = stringBuilder.toString();
         curGameState = GameState.MENU;
