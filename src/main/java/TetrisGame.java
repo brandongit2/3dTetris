@@ -190,7 +190,7 @@ public class TetrisGame extends SimpleApplication{
                         height("100%");
     
                         //GUI
-                        control(new LabelBuilder(){{
+                        control(new LabelBuilder("Greeting"){{
                             alignCenter();
                             color("#FFFFFF");
                             text("Welcome to Tetris!");
@@ -203,10 +203,17 @@ public class TetrisGame extends SimpleApplication{
                             width("30%");
                             interactOnClick("startButtonClicked()");
                         }});
-                        control(new LabelBuilder(){{
+                        control(new LabelBuilder("Highscore"){{
                             alignCenter();
                             valignBottom();
-                            height("100%");
+                            height("10%");
+                            width("100%");
+                            text("Highscores");
+                        }});
+                        control(new LabelBuilder("Scores/Names"){{
+                            alignCenter();
+                            valignBottom();
+                            height("25%");
                             width("100%");
                             text(highscoresText);
                         }});
