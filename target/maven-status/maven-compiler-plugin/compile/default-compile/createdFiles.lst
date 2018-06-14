@@ -1,0 +1,7 @@
+game/Color.class
+game/Tetromino.class
+game/Block$1.class
+game/Tetrominoes.class
+game/Block.class
+game/BlockMoveException.class
+game/TetrisGame.class
