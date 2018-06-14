@@ -12,4 +12,10 @@ public class StartScreenController extends DefaultScreenController implements Sc
     public void startButtonClicked() {
         tetrisGame.startGame();
     }
+    public void backButtonClicked(){
+        nifty.gotoScreen("Screen_ID");
+    }
+    public void instrButtonClicked(){
+        nifty.gotoScreen("Instructions");
+    }
 }

@@ -168,29 +168,25 @@ public class TetrisGame extends SimpleApplication{
             layer(new LayerBuilder("Layer_ID"){{
                 //layer properties...
                 childLayoutHorizontal();
-                //panel
                 layer(new LayerBuilder("MasterLayer"){{
-                    
                     childLayoutHorizontal();
-                    
-                    panel(new PanelBuilder("Grid") {{
+                    //panel
+                    panel(new PanelBuilder("Grid") {{ //for grid and tetris logo
                         childLayoutCenter();
                         alignLeft();
                         width("50%");
                         height("100%");
                         backgroundColor("#000000");
                     }});
-    
-    
-                    panel(new PanelBuilder("Start_Menu") {{
-                        
+                    
+                    panel(new PanelBuilder("Start_Menu") {{ //welcome, play, highscore
                         childLayoutVertical();
                         alignRight();
                         width("50%");
                         height("100%");
     
                         //GUI
-                        control(new LabelBuilder(){{
+                        control(new LabelBuilder("Greeting"){{
                             alignCenter();
                             color("#FFFFFF");
                             text("Welcome to Tetris!");
@@ -203,15 +199,66 @@ public class TetrisGame extends SimpleApplication{
                             width("30%");
                             interactOnClick("startButtonClicked()");
                         }});
-                        control(new LabelBuilder(){{
+                        control(new ButtonBuilder("GoToInstr", "Instructions"){{
+                            alignCenter();
+                            height("10%");
+                            width("30%");
+                            interactOnClick("instrButtonClicked()");
+                        }});
+                        control(new LabelBuilder("Highscore"){{
                             alignCenter();
                             valignBottom();
-                            height("100%");
+                            height("10%");
+                            width("100%");
+                            text("Highscores");
+                        }});
+                        control(new LabelBuilder("Scores/Names"){{
+                            alignCenter();
+                            valignBottom();
+                            height("25%");
                             width("100%");
                             text(highscoresText);
                         }});
                     }});
                 }}); //panel
+            }}); //layer
+        }}.build(nifty));
+    
+        nifty.addScreen("Instructions", new ScreenBuilder("How-to"){{
+            controller(new StartScreenController(tetrisGame));
+            //layer
+            layer(new LayerBuilder("Layer_ID2"){{
+                //layer properties...
+                alignCenter();
+                childLayoutCenter();
+                    //panel
+                    panel(new PanelBuilder("Instruction") {{ //instructions
+                        childLayoutVertical();
+                        width("50%");
+                        height("100%");
+                        //GUI
+                        control(new LabelBuilder("INSTRUCTIONS"){{
+                            alignCenter();
+                            valignCenter();
+                            color("#FFFFFF");
+                            text("Instructions");
+                            height("20%");
+                            width("50%");
+                        }});
+                        control(new LabelBuilder("Instruction Text"){{
+                            alignCenter();
+                            valignBottom();
+                            height("25%");
+                            width("100%");
+                            text("Here's how to play:\nClear as many layers as you can! One full level is a cleared layer!\nControls:\nButton-1\nButton-2\nButton-3\nButton-4");
+                        }});
+                        control(new ButtonBuilder("BackButton", "Back"){{
+                            alignCenter();
+                            height("10%");
+                            width("30%");
+                            interactOnClick("backButtonClicked()");
+                        }});
+                    }});
             }}); //layer
         }}.build(nifty));
         nifty.addScreen("empty", new ScreenBuilder("empty").build(nifty));
@@ -258,15 +305,15 @@ public class TetrisGame extends SimpleApplication{
     public void start() {
         Scanner in = null;
         try {
-            in = new Scanner(new File(this.getClass().getClassLoader().getResource("high scores.txt").toURI()));
+            in = new Scanner(new File(this.getClass().getClassLoader().getResource("high scores.txt").toURI())); //classloader creates URI of file
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
         StringBuilder stringBuilder = new StringBuilder();
-        while (in.hasNext()) {
-            stringBuilder.append(in.nextLine() + "\n");
+        for (int i = 0; i<5; i++){
+            stringBuilder.append(in.nextLine() + "\n"); //appends top 5 scores into highscoresText
         }
         highscoresText = stringBuilder.toString();
         curGameState = GameState.MENU;
