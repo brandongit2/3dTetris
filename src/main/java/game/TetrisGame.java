@@ -231,7 +231,7 @@ public class TetrisGame extends SimpleApplication {
         Container root = new Container();
         BorderLayout borderLayout = new BorderLayout();
         root.setLayout(borderLayout);
-        root.setLocalTranslation(0, height/2, 0);
+        root.setLocalTranslation(100, height/2+100, 0);
     
         Container middle = new Container();
     
@@ -246,7 +246,7 @@ public class TetrisGame extends SimpleApplication {
         middle.addChild(playButton);
         
         Container instructionsPanel = new Container();
-        RollupPanel rollupPanel = new RollupPanel("Instructions", instructionsPanel, "");
+        RollupPanel rollupPanel = new RollupPanel("Instructions", instructionsPanel, "glass");
         rollupPanel.getTitleElement().setTextHAlignment(HAlignment.Center);
         instructionsPanel.addChild(new Label("Here are the instructions."));
         rollupPanel.setOpen(false);
