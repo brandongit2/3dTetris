@@ -1,6 +1,7 @@
 package game;
 
 import com.jme3.app.SimpleApplication;
+import com.jme3.bounding.BoundingBox;
 import com.jme3.input.ChaseCamera;
 import com.jme3.input.KeyInput;
 import com.jme3.input.controls.ActionListener;
@@ -12,6 +13,12 @@ import com.jme3.math.Vector3f;
 import com.jme3.scene.Geometry;
 import com.jme3.scene.Node;
 import com.jme3.scene.shape.Line;
+import com.simsilica.lemur.*;
+import com.simsilica.lemur.component.BorderLayout;
+import com.simsilica.lemur.component.BoxLayout;
+import com.simsilica.lemur.core.GuiLayout;
+import com.simsilica.lemur.style.BaseStyles;
+import javafx.scene.layout.Pane;
 import jdk.nashorn.internal.objects.annotations.Getter;
 
 import static game.Rotations.CLOCKWISE;
@@ -27,6 +34,7 @@ public class TetrisGame extends SimpleApplication {
     private static final float     GRID_LINE_THICKNESS = 5.0f;
     private static final ColorRGBA GRID_COLOR          = new ColorRGBA(1, 1, 1, 0.1f);
     private int clear = 0;
+    private GameState curGameState;
     
     /**
      * The 3D array of {@see game.Block}s used for game logic. Not used for rendering.
@@ -209,8 +217,61 @@ public class TetrisGame extends SimpleApplication {
         return blocks;
     }
     
+    public void showMenu() {
+        
+        curGameState = GameState.MENU;
+        int width = settings.getWidth();
+        int height = settings.getHeight();
+        
+        // Lemur Setup
+        GuiGlobals.initialize(this);
+        BaseStyles.loadGlassStyle();
+        GuiGlobals.getInstance().getStyles().setDefaultStyle("glass");
+    
+        Container root = new Container();
+        BorderLayout borderLayout = new BorderLayout();
+        root.setLayout(borderLayout);
+        root.setLocalTranslation(0, height/2, 0);
+    
+        Container middle = new Container();
+    
+        Label title = new Label("Welcome to 3D Tetris");
+        title.setFontSize(40);
+        title.setTextVAlignment(VAlignment.Center);
+        middle.addChild(title);
+        
+        Button playButton = new Button("Play");
+        playButton.setFontSize(20);
+        playButton.setTextHAlignment(HAlignment.Center);
+        middle.addChild(playButton);
+        
+        Container instructionsPanel = new Container();
+        RollupPanel rollupPanel = new RollupPanel("Instructions", instructionsPanel, "");
+        rollupPanel.getTitleElement().setTextHAlignment(HAlignment.Center);
+        instructionsPanel.addChild(new Label("Here are the instructions."));
+        rollupPanel.setOpen(false);
+        middle.addChild(rollupPanel);
+        
+    
+        borderLayout.addChild(BorderLayout.Position.Center, middle);
+        
+        playButton.addClickCommands(new Command<Button>() {
+            @Override
+            public void execute(Button button) {
+                curGameState = GameState.PLAYING;
+                guiNode.detachChild(root);
+                return;
+            }
+        });
+        
+        guiNode.attachChild(root);
+    }
+    
     @Override
     public void simpleInitApp() {
+    
+        showMenu();
+        
         flyCam.setEnabled(false);
         Node cameraNode = new Node("cameraOrbit");
         cameraNode.setLocalTranslation(GAME_WIDTH / 2.0f - 0.5f, GAME_HEIGHT / 3.0f - 0.5f, GAME_LENGTH / 2.0f - 0.5f);
@@ -311,6 +372,12 @@ public class TetrisGame extends SimpleApplication {
             timeElapsed = 0;
             prevTime = System.currentTimeMillis();
         }
+    }
+    
+    @Override
+    public void start() {
+        setShowSettings(false);
+        super.start();
     }
     
     /**
