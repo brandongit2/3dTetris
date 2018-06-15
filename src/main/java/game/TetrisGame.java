@@ -342,35 +342,37 @@ public class TetrisGame extends SimpleApplication {
     
     @Override
     public void simpleUpdate(float tpf) {
-        timeElapsed = System.currentTimeMillis() - prevTime;
-        if (timeElapsed > 1000) {
-            active.translate(new Coordinate(0, -1, 0), false);
-            
-            // Check for full layers
-            for (int k = 0; k < GAME_HEIGHT; k++) {
-                int numBlocks = 0;
-                for (int i = 0; i < GAME_WIDTH; i++) {
-                    for (int j = 0; j < GAME_LENGTH; j++) {
-                        Coordinate a = new Coordinate(i, clear, j);
-                        System.out.println(a + " " + getBlock(a));
-                        if (getBlock(a) != null) {
-                            numBlocks++;
+        if (curGameState == GameState.PLAYING) {
+            timeElapsed = System.currentTimeMillis() - prevTime;
+            if (timeElapsed > 1000) {
+                active.translate(new Coordinate(0, -1, 0), false);
+        
+                // Check for full layers
+                for (int k = 0; k < GAME_HEIGHT; k++) {
+                    int numBlocks = 0;
+                    for (int i = 0; i < GAME_WIDTH; i++) {
+                        for (int j = 0; j < GAME_LENGTH; j++) {
+                            Coordinate a = new Coordinate(i, clear, j);
+                            System.out.println(a + " " + getBlock(a));
+                            if (getBlock(a) != null) {
+                                numBlocks++;
+                            }
                         }
                     }
+                    System.out.println(numBlocks);
+                    if (numBlocks == GAME_LENGTH * GAME_WIDTH) {
+                        clear++;
+                    }
                 }
-                System.out.println(numBlocks);
-                if (numBlocks == GAME_LENGTH * GAME_WIDTH) {
-                    clear++;
+                //System.out.println(clear);
+        
+                if (active.isFinished()) {
+                    newTetromino();
                 }
+        
+                timeElapsed = 0;
+                prevTime = System.currentTimeMillis();
             }
-            //System.out.println(clear);
-            
-            if (active.isFinished()) {
-                newTetromino();
-            }
-            
-            timeElapsed = 0;
-            prevTime = System.currentTimeMillis();
         }
     }
     
