@@ -13,6 +13,7 @@ import com.jme3.scene.Geometry;
 import com.jme3.scene.Node;
 import com.jme3.scene.shape.Line;
 import jdk.nashorn.internal.objects.annotations.Getter;
+import org.json.JSONObject;
 
 import static game.Rotations.CLOCKWISE;
 import static game.Rotations.COUNTERCLOCKWISE;
@@ -282,6 +283,7 @@ public class TetrisGame extends SimpleApplication {
     @Override
     public void simpleUpdate(float tpf) {
         timeElapsed = System.currentTimeMillis() - prevTime;
+        Score sc = new Score();
         if (timeElapsed > 1000) {
             active.translate(new Coordinate(0, -1, 0), false);
             
@@ -300,6 +302,7 @@ public class TetrisGame extends SimpleApplication {
                 System.out.println(numBlocks);
                 if (numBlocks == GAME_LENGTH * GAME_WIDTH) {
                     clear++;
+                    sc.setScore(200);;
                 }
             }
             //System.out.println(clear);
@@ -310,6 +313,8 @@ public class TetrisGame extends SimpleApplication {
             
             timeElapsed = 0;
             prevTime = System.currentTimeMillis();
+            sc.setScore(1);
+            System.out.println(sc.getScore());
         }
     }
     
