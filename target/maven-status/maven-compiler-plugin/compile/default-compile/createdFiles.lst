@@ -1,7 +1,13 @@
 game/Color.class
+game/Axes.class
 game/Tetromino.class
 game/Block$1.class
+game/BlockMoveExceptionType.class
+game/Tetromino$1.class
 game/Tetrominoes.class
+game/Coordinate.class
+game/Rotations.class
 game/Block.class
+game/GameState.class
 game/BlockMoveException.class
 game/TetrisGame.class

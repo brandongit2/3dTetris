@@ -47,7 +47,7 @@ public enum Tetrominoes {
       new Coordinate(0, -1, 0),
       new Coordinate(-1, -1, 0),
       new Coordinate(-1, -1, 1)
-    }, Color.DARK_GREY),
+    }, Color.LIGHT_GREY),
     BRANCH(new Coordinate[] {
       new Coordinate(0, 0, 0),
       new Coordinate(0, -1, 0),

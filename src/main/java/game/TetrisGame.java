@@ -1,7 +1,6 @@
 package game;
 
 import com.jme3.app.SimpleApplication;
-import com.jme3.bounding.BoundingBox;
 import com.jme3.input.ChaseCamera;
 import com.jme3.input.KeyInput;
 import com.jme3.input.controls.ActionListener;
@@ -15,10 +14,7 @@ import com.jme3.scene.Node;
 import com.jme3.scene.shape.Line;
 import com.simsilica.lemur.*;
 import com.simsilica.lemur.component.BorderLayout;
-import com.simsilica.lemur.component.BoxLayout;
-import com.simsilica.lemur.core.GuiLayout;
-import com.simsilica.lemur.style.BaseStyles;
-import javafx.scene.layout.Pane;
+import com.simsilica.lemur.core.GuiControl;
 import jdk.nashorn.internal.objects.annotations.Getter;
 
 import static game.Rotations.CLOCKWISE;
@@ -33,8 +29,8 @@ public class TetrisGame extends SimpleApplication {
     private static final int       GAME_HEIGHT         = 16;
     private static final float     GRID_LINE_THICKNESS = 5.0f;
     private static final ColorRGBA GRID_COLOR          = new ColorRGBA(1, 1, 1, 0.1f);
-    private int clear = 0;
-    private GameState curGameState;
+    private              int       clear               = 0;
+    private              GameState curGameState;
     
     /**
      * The 3D array of {@see game.Block}s used for game logic. Not used for rendering.
@@ -75,10 +71,12 @@ public class TetrisGame extends SimpleApplication {
             if (getBlock(coordinate) == null || getBlock(coordinate).getParent() == block.getParent()) {
                 blocks[coordinate.x][coordinate.y][coordinate.z] = block;
             } else {
-                throw new BlockMoveException("Attempted to set a block on an occupied spot: " + coordinate.toString(), BlockMoveExceptionType.SPACE_OCCUPIED, false);
+                throw new BlockMoveException("Attempted to set a block on an occupied spot: " + coordinate.toString(),
+                                             BlockMoveExceptionType.SPACE_OCCUPIED, false);
             }
         } catch (ArrayIndexOutOfBoundsException e) {
-            throw new BlockMoveException("Attempted to set a block out of the game area: " + coordinate.toString(), BlockMoveExceptionType.OUT_OF_BOUNDS, false);
+            throw new BlockMoveException("Attempted to set a block out of the game area: " + coordinate.toString(),
+                                         BlockMoveExceptionType.OUT_OF_BOUNDS, false);
         } catch (NullPointerException ignored) {}
     }
     
@@ -217,27 +215,29 @@ public class TetrisGame extends SimpleApplication {
         return blocks;
     }
     
-    public void showMenu() {
-        
+    private void showMenu() {
         curGameState = GameState.MENU;
-        int width = settings.getWidth();
+        int width  = settings.getWidth();
         int height = settings.getHeight();
         
         // Lemur Setup
         GuiGlobals.initialize(this);
-        BaseStyles.loadGlassStyle();
-        GuiGlobals.getInstance().getStyles().setDefaultStyle("glass");
-    
-        Container root = new Container();
+        //BaseStyles.loadGlassStyle();
+        //GuiGlobals.getInstance().getStyles().setDefaultStyle("glass");
+        
+        Container    root         = new Container();
         BorderLayout borderLayout = new BorderLayout();
         root.setLayout(borderLayout);
-        root.setLocalTranslation(100, height/2+100, 0);
-    
+        root.setLocalTranslation(width / 2 - 150, height / 2 + 100, 0);
+        root.setSize(new Vector3f(width, height, 0));
+        
         Container middle = new Container();
-    
+        middle.setSize(new Vector3f(10, 10, 0));
+        GuiControl guiControl = new GuiControl(borderLayout);
+        
         Label title = new Label("Welcome to 3D Tetris");
         title.setFontSize(40);
-        title.setTextVAlignment(VAlignment.Center);
+        title.setTextHAlignment(HAlignment.Center);
         middle.addChild(title);
         
         Button playButton = new Button("Play");
@@ -245,23 +245,18 @@ public class TetrisGame extends SimpleApplication {
         playButton.setTextHAlignment(HAlignment.Center);
         middle.addChild(playButton);
         
-        Container instructionsPanel = new Container();
-        RollupPanel rollupPanel = new RollupPanel("Instructions", instructionsPanel, "glass");
+        Container   instructionsPanel = new Container();
+        RollupPanel rollupPanel       = new RollupPanel("Instructions", instructionsPanel, "glass");
         rollupPanel.getTitleElement().setTextHAlignment(HAlignment.Center);
-        instructionsPanel.addChild(new Label("Here are the instructions."));
+        instructionsPanel.addChild(new Label("Keyboard buttons QWEASD rotate the tetromino.\nArrow keys move the tetromino."));
         rollupPanel.setOpen(false);
         middle.addChild(rollupPanel);
         
-    
         borderLayout.addChild(BorderLayout.Position.Center, middle);
         
-        playButton.addClickCommands(new Command<Button>() {
-            @Override
-            public void execute(Button button) {
-                curGameState = GameState.PLAYING;
-                guiNode.detachChild(root);
-                return;
-            }
+        playButton.addClickCommands((Command<Button>) button -> {
+            curGameState = GameState.PLAYING;
+            guiNode.detachChild(root);
         });
         
         guiNode.attachChild(root);
@@ -269,7 +264,6 @@ public class TetrisGame extends SimpleApplication {
     
     @Override
     public void simpleInitApp() {
-    
         showMenu();
         
         flyCam.setEnabled(false);
@@ -346,30 +340,28 @@ public class TetrisGame extends SimpleApplication {
             timeElapsed = System.currentTimeMillis() - prevTime;
             if (timeElapsed > 1000) {
                 active.translate(new Coordinate(0, -1, 0), false);
-        
+                
                 // Check for full layers
                 for (int k = 0; k < GAME_HEIGHT; k++) {
                     int numBlocks = 0;
                     for (int i = 0; i < GAME_WIDTH; i++) {
                         for (int j = 0; j < GAME_LENGTH; j++) {
                             Coordinate a = new Coordinate(i, clear, j);
-                            System.out.println(a + " " + getBlock(a));
                             if (getBlock(a) != null) {
                                 numBlocks++;
                             }
                         }
                     }
-                    System.out.println(numBlocks);
                     if (numBlocks == GAME_LENGTH * GAME_WIDTH) {
                         clear++;
                     }
                 }
                 //System.out.println(clear);
-        
+                
                 if (active.isFinished()) {
                     newTetromino();
                 }
-        
+                
                 timeElapsed = 0;
                 prevTime = System.currentTimeMillis();
             }
@@ -378,7 +370,7 @@ public class TetrisGame extends SimpleApplication {
     
     @Override
     public void start() {
-        setShowSettings(false);
+        //setShowSettings(false);
         super.start();
     }
     
@@ -388,6 +380,10 @@ public class TetrisGame extends SimpleApplication {
      * @param args Command line arguments.
      */
     public static void main(String[] args) {
+        //Score.addScore(60);
+        //Score.saveScore("brandon");
+        //System.out.println(Score.readScore("brandon"));
+        
         new TetrisGame().start();
     }
 }
